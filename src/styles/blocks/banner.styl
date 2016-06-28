@@ -1,0 +1,67 @@
+.banner
+	height 698px
+	background-image url(../../images/banner__bg.jpg)
+	background-repeat no-repeat
+	background-position center
+	background-size cover
+	z-index 1
+
+	&__content
+		margin-top 220px
+		margin-left 6px
+		position relative
+		height 324px
+		/**background-image url(../../images/banner__border.png)
+		background-repeat no-repeat
+		background-position center
+		background-size contain
+		b*/
+		border 3px solid $white
+		border-top none
+		
+		&::before
+			content ''
+			position absolute
+			top 0
+			left 0
+			height 2px
+			width 704px
+			background-color $white
+		
+		&::after
+			content ''
+			position absolute
+			top 0
+			right 0
+			height 2px
+			width 230px
+			background-color $white
+	
+	&__title
+		margin-top 40px
+		margin-left 35px
+		
+		&-part-1
+			display block
+			color $white
+			font-size 50px
+			font-weight 700
+			text-transform uppercase
+		
+		&-part-2
+			padding-top -100px
+			color $blue
+			font-size 66px
+		
+	&__text
+		margin-left 35px
+		margin-bottom 30px
+		font-size 18px
+		color #dde0e2
+		
+		&-separator
+			display block
+	
+	&__button
+		margin-left 35px
+		
