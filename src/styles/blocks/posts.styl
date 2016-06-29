@@ -1,0 +1,72 @@
+.posts
+	&__img
+		height 380px
+		max-width @height
+		z-index 1
+		
+		&-1
+			background url(../../images/posts__love.png), url(../../images/post-1__img.jpg)
+			background-repeat no-repeat,no-repeat
+			background-position center, center
+		
+		&-2
+			background url(../../images/posts__tree.png), url(../../images/post-2__img.jpg)
+			background-repeat no-repeat,no-repeat
+			background-position center, center
+		
+	
+	&__content
+		padding-top 50px
+		position relative
+		height 380px
+		max-width @height
+		z-index 10
+	
+		&--angle-left::after
+			content ''
+			position absolute
+			top 50px
+			left -10px
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 10px 10px 0;
+			border-color: transparent $white transparent transparent;
+		
+		&--angle-right::after
+			content ''
+			position absolute
+			top 50px
+			right -9px
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 0 10px 10px;
+			border-color: transparent transparent transparent $white;
+	
+	&__blue-word
+		display block
+		font-size 12px
+		color #0083b3
+		text-transform uppercase
+		font-weight 700
+	
+	&__title
+		margin-top 50px
+		font-size 17px
+		padding-left 27px
+		padding-right 27px
+		color #212121
+		font-weight 700
+		text-transform uppercase
+		letter-spacing 1.7px
+		line-height 1.5
+	
+	&__text
+		margin-top 25px
+		padding-left 40px
+		padding-right 40px
+		font-size 15px
+		color #777
+		
+			
