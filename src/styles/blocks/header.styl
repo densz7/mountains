@@ -1,3 +1,10 @@
+@keyframes pulse	
+	50%
+		transform scale(1.1)
+	
+	100%
+		transform scale(1)
+
 .header
 	padding-top 30px
 	position fixed
@@ -16,6 +23,14 @@
 	&__button
 		margin-top -8px
 		float right
+		
+		&--hover:hover
+			color $white
+			background-color $blue
+			animation-name pulse
+			animation-duration 1.4s
+			animation-timing-function linear
+			animation-iteration-count infinite
 	
 	&--white
 		background-color $white
