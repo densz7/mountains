@@ -1,0 +1,72 @@
+.scheme
+	min-height 665px
+	background-color $white
+	
+	&__title
+		margin-top 70px
+		margin-bottom 75px
+		padding-top 30px
+		color $section-title-color
+		font-weight 700
+		text-transform uppercase
+		background-image url(../../images/title-top.png)
+		background-repeat no-repeat
+		background-position center 0
+	
+	&__number
+		position relative
+		margin 0 auto
+		margin-bottom 55px
+		line-height 39px
+		width 45px
+		height @width
+		text-align center
+		font-size 16px
+		font-weight 700
+		color $blue
+		background-color $white
+		border 4px solid $blue
+		border-radius 50%
+		
+		&::before
+			content ''
+			position absolute
+			display block
+			top 50%
+			left 42px
+			width 245px
+			height 2px
+			background-image url(../../images/scheme/scheme__border.png)
+			background-repeat repeat-x
+			transform rotate(180deg)
+		
+		&::after
+			content ''
+			position absolute
+			display block
+			top 70px
+			left -8px
+			width 55px
+			height 2px
+			background-image url(../../images/scheme/scheme__border.png)
+			transform rotate(90deg)
+			background-repeat repeat-x
+
+		&--no-border::before
+			background-image none
+	
+	&__image
+		margin 0 auto
+		margin-bottom 25px
+		width 180px
+		height @width
+		background-repeat no-repeat
+		background-position center
+	
+	&__text
+		font-size 18px
+		color #949494
+		
+		&-dark
+			color #2c2e37
+			font-weight 700

@@ -1,48 +1,93 @@
+@keyframes pulse	
+	50%
+		transform scale(1.1)
+	
+	100%
+		transform scale(1)
+
+@keyframes ripple-out 
+	100% 
+		top -12px
+		right -12px
+		bottom -12px
+		left -12px
+		opacity 0
+
 .button
-	padding 13px 46px
+	display inline-block
 	font-size 12px
 	font-weight 700
-	color $blue
 	text-transform uppercase
-	background-color transparent
-	border 3px solid $blue
+	color $white
+	background-color $blue
+	border none
 	border-radius 4px
 	outline none
-	transition all .35s ease
+	transition all .8s ease
 	
 	&:hover
 	&:focus
-		color $blue
+		color $white
 		text-decoration none
 	
-	&--hover:hover
-		color $white
-		background-color $blue
-		animation-name pulse
-		animation-duration 1.4s
-		animation-iteration-count infinite
+	&--header
+			padding 13px 46px
+			color $blue
+			background-color transparent
+			border 3px solid $blue
+			
+			&:hover
+			&:focus
+				color $blue
+	
+	&--pulse
+		&:hover
+			color $white
+			background-color $blue
+			animation-name pulse
+			animation-duration 1.4s
+			animation-iteration-count infinite
+	
+	&--ripple-out
+		position: relative
+		
+		&::before
+			content: '';
+			position: absolute;
+			border: $blue solid 2px;
+			border-radius 4px
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			animation-duration: 1s;
+		
+		&:hover::before
+			animation-name ripple-out
 		
 	&--banner
 		padding 23px 75px
-		color $white
-		background-color $blue
 		border none
 		box-shadow 0 0 35px rgba(#030303, .06)
 		letter-spacing 1.6px
-	
-		&:hover
-		&:focus
-			color $white
-			background-color $blue
-		
+
 	&--about-us
 		padding 13px 25px
 		color $white
 		background-color $blue
-		border none
-		box-shadow none
-		
-		&:hover
-		&:focus
-			color $white
-			background-color $blue
+	
+	&--form
+		padding: 16px 55px;
+		font-size 16px
+		color: $white
+		background-color: #36aeea;
+	
+	&--contacts
+		width 100%
+		line-height 70px
+		font-size $text-font
+		text-transform uppercase
+		font-weight 700
+		color $white
+		background-color $blue
+			
