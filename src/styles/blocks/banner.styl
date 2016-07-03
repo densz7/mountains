@@ -1,0 +1,56 @@
+.banner
+	min-height 698px
+	background-image url(../../images/banner__bg.jpg)
+	background-repeat no-repeat
+	background-position center
+	background-size cover
+	z-index 1
+
+	&__content
+		margin-top 220px
+		margin-left 6px
+		padding-bottom 42px
+		position relative
+		border 3px solid $white
+		border-top none
+		
+		&::before
+			content ''
+			position absolute
+			top 0
+			left 0
+			width 704px
+			background-color $white
+			border-top solid 3px $white
+		
+		&::after
+			content ''
+			position absolute
+			top 0
+			right 0
+			width 230px
+			background-color $white
+			border-top solid 3px $white
+	
+	&__title
+		padding-top 40px
+		margin-left 35px
+		color $white
+		font-size 50px
+		font-weight 700
+		text-transform uppercase
+		letter-spacing 5px
+		
+		&-part-2
+			color $blue
+			text-transform none
+			letter-spacing 0
+		
+	&__text
+		margin-bottom 25px
+		margin-left 35px
+		font-size 18px
+		color #dde0e2
+	
+	&__button
+		margin-left 35px

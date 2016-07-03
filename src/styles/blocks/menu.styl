@@ -1,0 +1,47 @@
+.menu
+	font-size 0
+	
+	&__item
+		position relative
+		margin-right 25px
+		padding-bottom 8px
+		display inline-block
+		font-size 12px
+		font-weight 700
+		text-transform uppercase
+		color $gray //как тут быть с повторением?
+		text-decoration none
+
+		&:last-child
+			margin-right 0
+		
+		&:hover			
+		&:focus
+			color $gray
+			text-decoration none
+		
+		&::after
+			content ''
+			position absolute
+			bottom 0
+			left 0
+			transition all .3s ease
+			height 2px
+			width 0
+			background-color $blue
+		
+		&:hover::after
+			width 100%
+		
+		&--active
+			position relative
+			
+			&::after
+				content ''
+				position absolute
+				bottom 0
+				left 0
+				height 2px
+				width 100%
+				background-color $blue
+				transition all .3s ease

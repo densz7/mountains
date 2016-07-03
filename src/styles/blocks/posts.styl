@@ -1,0 +1,88 @@
+.posts
+	padding-left 15px
+	padding-right 15px
+	box-shadow 0 0 21px rgba(#060606, .13)
+	
+	&__img
+		height 380px
+		z-index 1
+		background-repeat no-repeat,no-repeat
+		background-position center, center
+		background-size cover
+		
+	
+	&__content
+		padding-top 50px
+		position relative
+		height 380px
+		z-index 5
+	
+		&--angle-left::after
+			content ''
+			position absolute
+			top 50px
+			left -9px
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 10px 10px 0;
+			border-color: transparent $white transparent transparent;
+		
+		&--angle-right::after
+			content ''
+			position absolute
+			top 50px
+			right -9px
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 0 10px 10px;
+			border-color: transparent transparent transparent $white;
+		
+		&--angle-top::after
+			content ''
+			position absolute
+			top -9px
+			left 50px
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 10px 10px 10px;
+			border-color: transparent transparent $white transparent;
+	
+	&__categories
+		display block
+		font-size 12px
+		color $blue
+		text-transform uppercase
+		font-weight 700
+	
+	&__title
+		margin-top 50px
+		font-size 17px
+		padding-left 30px
+		padding-right 30px
+		color #212121
+		font-weight 700
+		text-transform uppercase
+		letter-spacing 1.7px
+		line-height 1.5
+	
+	&__text
+		margin-top 25px
+		padding-left 45px
+		padding-right 45px
+		font-size 15px
+		color #777
+	
+	&__line-through
+		text-decoration line-through
+	
+	&__number
+		position absolute
+		bottom 45px
+		font-size 15px
+		color#212121
+		font-style italic
+		
+			
