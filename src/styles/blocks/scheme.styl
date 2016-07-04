@@ -1,4 +1,5 @@
 .scheme
+	padding-bottom 40px
 	min-height 665px
 	background-color $white
 	
@@ -70,3 +71,11 @@
 		&-dark
 			color #2c2e37
 			font-weight 700
+	
+	@media (max-width: $screen-xs-max)
+		&__number
+			&::before
+				display none
+		
+		&__text
+			margin-bottom 40px

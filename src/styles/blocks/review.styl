@@ -2,20 +2,33 @@
 	margin-left 15px
 	margin-right 25px
 	padding-top 40px
-	background-image url(../../images/review/commas.png)
-	background-repeat no-repeat
+	
+	&__title
+		margin-top 70px
+		margin-bottom 90px
+		padding-top 30px
+		font-size 35px
+		color $section-title-color
+		font-weight 700
+		text-transform uppercase
+		background-image url(../../images/title-top.png)
+		background-repeat no-repeat
+		background-position center 0
 	
 	&__text
 		margin-bottom 20px
+		padding-top 40px
 		font-size 18px
 		color #bcbcbc
 		line-height 2
+		background-image url(../../images/review/commas.png)
+		background-repeat no-repeat
 	
 	&__info
 		margin-bottom 140px
-		line-height 68px
 		font-size 16px
 		color $blue
+		line-height 68px
 		
 	&__photo
 		margin-right 15px
@@ -25,4 +38,21 @@
 		border-radius 50%
 
 	&__name
+		display inline-block
 		font-weight 700
+	
+	&__job
+		display inline-block
+	
+	@media (max-width: $screen-xs-max)
+		&__info:nth-child(2)
+			margin-bottom 120px
+			
+		&__photo
+			margin-left 55px
+			
+		&__name
+		&__job
+			margin-right 15px
+			float left
+		

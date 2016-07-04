@@ -1,6 +1,7 @@
 .footer
-	min-height 83px
 	padding-top 35px
+	padding-bottom 20px
+	min-height 83px
 	background-color $footer-color
 	
 	&__copyright
@@ -32,3 +33,15 @@
 	
 	&__vk
 		margin-right 0
+	
+	@media (max-width: $screen-xs-max)
+		text-align center
+		
+		&__social-icons
+			margin-top 20px
+		
+		&__phone
+			float none
+		
+		&__copyright
+			margin-top 20px

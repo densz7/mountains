@@ -24,6 +24,7 @@
 	border-radius 4px
 	outline none
 	transition all .8s ease
+	letter-spacing 1.5px
 	
 	&:hover
 	&:focus
@@ -31,7 +32,7 @@
 		text-decoration none
 	
 	&--header
-			padding 13px 46px
+			padding 15px 48px
 			color $blue
 			background-color transparent
 			border 3px solid $blue
@@ -90,4 +91,8 @@
 		font-weight 700
 		color $white
 		background-color $blue
+	
+	@media (max-width: $screen-xs-max)
+		&--header
+			padding 13px 40px
 			

@@ -1,9 +1,10 @@
 .about-us
+	padding-bottom 40px
 	min-height 667px
 	background-color #f6f4f4
 	background-image url(../../images/about-us/about-us__circles.png)
 	background-repeat no-repeat
-	background-position 300px 23px
+	background-position 380px 23px
 	
 	&__content
 		margin-top 202px
@@ -26,13 +27,31 @@
 	&__photo-1
 		display block
 		margin-top -35px
-		margin-left 75px
+		margin-left -305px
 		max-width 750px
-		z-index 1
 	
 	&__photo-2
+		margin-top 280px
 		display block
-		margin-top -255px
-		z-index 10
+		z-index -1
 		
+	@media (max-width: $screen-xs-max)
+		background-position center 23px
 		
+		&__content
+			margin-top 80px
+			text-align center
+			background-position top center
+			
+		&__text
+			padding-left 40px
+			padding-right 40px
+			
+		&__photo-1
+			margin 0 auto
+			margin-top 40px
+			max-width 400px
+		
+		&__photo-2
+			margin 0 auto
+			margin-top 40px
