@@ -2,6 +2,7 @@
 	margin-left 15px
 	margin-right 25px
 	padding-top 40px
+	padding-bottom 110px
 	
 	&__title
 		margin-top 70px
@@ -25,7 +26,7 @@
 		background-repeat no-repeat
 	
 	&__info
-		margin-bottom 140px
+		margin-bottom 50px
 		font-size 16px
 		color $blue
 		line-height 68px
@@ -45,14 +46,14 @@
 		display inline-block
 	
 	@media (max-width: $screen-xs-max)
-		&__info:nth-child(2)
-			margin-bottom 120px
-			
-		&__photo
-			margin-left 55px
-			
-		&__name
-		&__job
-			margin-right 15px
-			float left
+		&__text
+			font-size 15px
 		
+		&__info
+			line-height 30px
+		
+		&__photo
+			display block
+			float none
+			margin-left auto
+			margin-right auto

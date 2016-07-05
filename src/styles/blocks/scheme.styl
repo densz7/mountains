@@ -34,8 +34,8 @@
 			position absolute
 			display block
 			top 50%
-			left 42px
-			width 245px
+			width 240px
+			left 45px
 			height 2px
 			background-image url(../../images/scheme/scheme__border.png)
 			background-repeat repeat-x
@@ -54,7 +54,7 @@
 			background-repeat repeat-x
 
 		&--no-border::before
-			background-image none
+			display  none
 	
 	&__image
 		margin 0 auto
@@ -73,6 +73,15 @@
 			font-weight 700
 	
 	@media (max-width: $screen-xs-max)
+		&__number
+			&::before
+				display none
+		
+		&__text
+			margin-bottom 40px
+			font-size 15px
+	
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
 		&__number
 			&::before
 				display none
