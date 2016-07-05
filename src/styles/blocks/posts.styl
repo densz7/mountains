@@ -14,7 +14,6 @@
 	&__content
 		padding-top 50px
 		position relative
-		height 380px
 		z-index 5
 	
 		&--angle-left::after
@@ -70,10 +69,12 @@
 	
 	&__text
 		margin-top 25px
+		margin-bottom 0
 		padding-left 45px
 		padding-right 45px
 		font-size 15px
 		color #777
+		line-height 22.8px
 	
 	&__line-through
 		text-decoration line-through
@@ -84,5 +85,35 @@
 		font-size 15px
 		color#212121
 		font-style italic
-		
+	
+	@media (max-width: $screen-xs-max)
+		&__content
+			padding-bottom 80px
 			
+			&--angle-left::after
+				display none
+			
+			&--angle-bottom::after
+				content ''
+				position absolute
+				bottom -9px
+				left 50px
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 10px 10px 0 10px;
+				border-color: $white transparent transparent transparent;
+	
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+		&__content
+			padding-bottom 80px
+			&--angle-left::after
+				display none
+	
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+		&__number
+			display none
+	
+	@media (min-width: $screen-lg-min)
+		&__content
+			height 380px

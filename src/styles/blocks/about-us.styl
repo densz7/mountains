@@ -1,9 +1,10 @@
 .about-us
+	padding-bottom 40px
 	min-height 667px
 	background-color #f6f4f4
 	background-image url(../../images/about-us/about-us__circles.png)
 	background-repeat no-repeat
-	background-position 300px 23px
+	background-position 380px 23px
 	
 	&__content
 		margin-top 202px
@@ -24,15 +25,53 @@
 		color #949494
 	
 	&__photo-1
+		position relative
 		display block
+		margin-left -320px
 		margin-top -35px
-		margin-left 75px
-		max-width 750px
+		max-width 580px
 		z-index 1
 	
 	&__photo-2
+		position relative
+		margin-top 280px
 		display block
-		margin-top -255px
-		z-index 10
+		z-index 3
 		
+	@media (max-width: $screen-xs-max)
+		background-position center 23px
 		
+		&__content
+			margin-top 80px
+			text-align center
+			background-position top center
+			
+		&__text
+			padding-left 40px
+			padding-right 40px
+			
+		&__photo-1
+			margin 0 auto
+			margin-top 40px
+			max-width 100%
+		
+		&__photo-2
+			margin 0 auto
+			margin-top 40px
+		
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+		&__photo-1
+			float right
+			margin-top -40px
+			max-width 460px
+		
+		&__photo-2
+			margin-top 40px
+		
+	
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+		&__photo-1
+			max-width 550px
+			
+		&__photo-2
+			margin-left -30px		
