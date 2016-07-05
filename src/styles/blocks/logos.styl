@@ -32,7 +32,45 @@
 		
 		&--nike
 			margin-top -5px
-			width 69px
 			float right
+			width 68px
 			height 28px
-		
+	
+	@media (max-width: $screen-xs-max)
+		&__img
+			background-position center
+			
+			&--slack
+			&--a
+			&--google
+			&--facebook
+			&--spotify
+			&--nike
+				margin-left 0
+				margin-bottom 80px
+			
+			&--nike
+				width 100%
+				float none
+	
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+		&__img
+			background-position center
+			
+			&--slack
+			&--a
+			&--google
+			&--facebook
+			&--spotify
+			&--nike
+				margin-left 0
+				margin-bottom 80px
+			
+			&--nike
+				width 100%
+				float none
+	
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+		&__img
+			margin-left 0
+			background-position center

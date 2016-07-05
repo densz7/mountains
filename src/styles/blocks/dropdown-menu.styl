@@ -1,0 +1,64 @@
+.dropdown-menu
+	margin-top 20px
+	
+	&__check
+		display none
+		&:checked ~ .dropdown-menu__items
+			display block
+	
+	&--icon
+		position relative
+		display block
+		width 30px
+		height 4px
+		background-color $blue
+		border-radius 5px
+		cursor pointer
+
+		&::before
+			content ''
+			position absolute
+			top -9px
+			width 30px
+			height 4px
+			background-color $blue
+			border-radius 5px
+
+		&::after
+			content ''
+			position absolute
+			bottom -9px
+			width 30px
+			height 4px
+			background-color $blue
+			border-radius 5px
+	
+	&__items
+		display none
+	
+	&__item
+		padding 10px
+		display block
+		font-size 12px
+		font-weight 700
+		text-transform uppercase
+		color $gray //как тут быть с повторением?
+		text-decoration none
+		transition all .35s ease
+	
+		&:last-child
+			margin-bottom 15px
+		
+		&:focus
+			color $gray
+			text-decoration none
+		
+		&:hover
+			background-color $blue
+			color $white
+			text-decoration none
+		
+		&--active
+		&--active:focus
+			background-color $blue
+			color $white
