@@ -48,10 +48,18 @@ gulp.task('compile_stylus', function () {
 //         .pipe(gulp.dest('dist/styles/')); // Выгружаем в папку dist/styles/
 // });
 
+// Создаем задачу, которая склеивает все скрипты в один файл
+gulp.task('scripts', function() {
+  return gulp.src('src/scripts/*.js')
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('dist/scripts/'));
+});
+
 // Создаем задачу watch, которая следит за измненеиями файлов с расширением .styl
 gulp.task('watch', function () {
+    gulp.watch('src/scripts/*.js', ['scripts']);
     gulp.watch('src/styles/blocks/*.styl', ['compile_stylus']);
 });
 
 // Создаем задачу default для автоматического просмотра изменений и их компиляции
-gulp.task('default', ['compile_stylus', 'watch']);
+gulp.task('default', ['compile_stylus', 'scripts', 'watch']);
