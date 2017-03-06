@@ -7,7 +7,8 @@ var gulp = require('gulp'), // Подключаем плагин gulp
 	cssnano = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
     rename	= require('gulp-rename'), // Подключаем библиотеку для переименования файлов
 	sourcemaps = require('gulp-sourcemaps'), // Подключаем sourcemap
-	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+	autoprefixer = require('gulp-autoprefixer'),// Подключаем библиотеку для автоматического добавления префиксов
+	server = require('gulp-server-livereload');
 
 // Создаем задачу для Stylus
 gulp.task('compile_stylus', function () {
@@ -33,21 +34,6 @@ gulp.task('compile_stylus', function () {
         .pipe(gulp.dest('dist/styles/')); // Копируем файл style.css в папку dist/styles/    
 });
 
-// // Создаем задачу для минификации css
-// gulp.task('css-min', ['compile_stylus'], function() {
-//     gulp.src('dist/styles/style.css') // Выбираем файл для минификации
-	
-// 	.pipe(sourcemaps.init())
-	
-//         .pipe(cssnano()) // Сжимаем
-	
-//         .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
-	
-// 	.pipe(sourcemaps.write('./'))
-	
-//         .pipe(gulp.dest('dist/styles/')); // Выгружаем в папку dist/styles/
-// });
-
 // Создаем задачу, которая склеивает все скрипты в один файл
 gulp.task('scripts', function() {
   return gulp.src('src/scripts/*.js')
@@ -59,6 +45,15 @@ gulp.task('scripts', function() {
 gulp.task('watch', function () {
     gulp.watch('src/scripts/*.js', ['scripts']);
     gulp.watch('src/styles/blocks/*.styl', ['compile_stylus']);
+});
+
+// Создаем задачу для livereload
+gulp.task('serv', function() {
+  gulp.src('./')
+    .pipe(server({
+      fallback: 'index.html',
+	  open: true
+    }));
 });
 
 // Создаем задачу default для автоматического просмотра изменений и их компиляции
